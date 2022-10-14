@@ -26,10 +26,10 @@ class M_Usuario extends Conexion
         $sentencia->close();
     }
     
-    public function deleteUser(Usuario $usuario){
-        $sentencia = parent::con()->prepare("DELETE * from usuarios where username = ?");
+    public function deleteUser($username){
+        $sentencia = parent::con()->prepare("DELETE from usuarios where username = ?");
         
-        $sentencia->bind_param("s",$usuario->getUsername());
+        $sentencia->bind_param("s",$username);
         
         $sentencia->execute();
         $sentencia->close();
