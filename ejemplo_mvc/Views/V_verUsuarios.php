@@ -22,6 +22,7 @@
    			    echo "<td>" . $usuario['password'] . "</td>";
    			    echo "<td>" . $usuario['nombre'] . "</td>";
    			    echo "<td><a href='C_eliminarUsuario.php?username=". $usuario['username'] ."'><button>Eliminar usuario</button></a></td>";
+   			    echo "<td><a href='C_modificarUsuario.php?username=". $usuario['username'] ."'><button>Modificar usuario</button></a></td>";
    			    echo "</tr>";
    			}
    			
