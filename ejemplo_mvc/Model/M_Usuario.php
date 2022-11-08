@@ -37,7 +37,7 @@ class M_Usuario extends Conexion
     }
     
     public function modifierUser(Usuario $usuario){
-        $sentencia = parent::con()->prepare("UPDATE usuarios SET password=?, nombre=? WHERE username='".$usuario->getUsername()."';");
+        $sentencia = parent::con()->prepare("UPDATE usuarios SET password=?, nombre=? WHERE username=?;");
         
         $sentencia->bind_param("sss",$usuario->getPassword(), $usuario->getNombre(), $usuario->getUsername());
         
